@@ -1,0 +1,1116 @@
+{
+	"info": {
+		"_postman_id": "72ffd1a8-ed72-4022-8100-62472c23e981",
+		"name": "Age_Tests_USA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "-1 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"underage\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "-1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					],
+					"query": [
+						{
+							"key": "age",
+							"value": "0",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "0 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"underage\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "1 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"underage\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "16 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"underage\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "16",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "19 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"underage\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "19",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "20 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"underage\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "21 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"underage\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "21",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "30 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"adult\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"17\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "30",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "49 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"adult\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"17\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "49",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "50 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"adult\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"17\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "50",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "51 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"antiquity\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "51",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "70 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"antiquity\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "70",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "99 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"antiquity\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "99",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "100 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"antiquity\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "100",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "101 age_usa",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// 1) проверка статус кода\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// 2) Соответствие отправленного параметра age пришедшему \r",
+							"pm.test('Age=age', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"\r",
+							"\r",
+							"    pm.expect(resp_data.age).to.eql(req_data.age);\r",
+							"    console.log (resp_data.age + ' = ' + req_data.age);\r",
+							"});\r",
+							"// 3) Соответствует ли age_type классу эквивалентности параметра age\r",
+							"pm.test('Age_type_is_correct', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age = \"antiquity\";\r",
+							"\r",
+							"    pm.expect(resp_data.age_type).to.eql(user_age);\r",
+							"    console.log (resp_data.age_type + ' = ' + user_age);\r",
+							"});\r",
+							"// 4) Соответствует ли количество элементов ответа классу эквивалентоности параметра age\r",
+							"pm.test('Age_matches_the_content', function () {\r",
+							"    let req_data  = request.data;       \r",
+							"    let resp_data = pm.response.json();\r",
+							"    let user_age_content = \"8\";\r",
+							"\r",
+							"    pm.expect(resp_data.content.length).to.eql(Number(user_age_content));\r",
+							"    console.log (resp_data.content.length + ' = ' + user_age_content);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "age",
+							"value": "101",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "116.203.27.46:5002/age_usa",
+					"host": [
+						"116",
+						"203",
+						"27",
+						"46"
+					],
+					"port": "5002",
+					"path": [
+						"age_usa"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
